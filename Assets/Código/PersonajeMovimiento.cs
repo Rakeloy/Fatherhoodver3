@@ -5,6 +5,9 @@ using UnityEngine;
 public class PersonajeMovimiento : MonoBehaviour
 {
     [SerializeField] private float velocidad;
+    public bool EnMovimiento => _direccionMovimiento.magnitude > 0f;
+    public Vector2 DireccionMovimiento => _direccionMovimiento;
+
     private Rigidbody2D _rigidbody2D;
     private Vector2 _direccionMovimiento;
     private Vector2 _input;
