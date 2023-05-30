@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : Singleton<UIManager>
 {
+     [Header("Paneles")] 
+     [SerializeField] private GameObject panelInventario;
     
-    // Start is called before the first frame update
-    void Start()
+   
+    #region Paneles
+    public void AbrirCerrarPanelInventario()
     {
-        
+        panelInventario.SetActive(!panelInventario.activeSelf);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 }
