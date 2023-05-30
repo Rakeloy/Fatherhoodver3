@@ -16,7 +16,8 @@ MonoBehaviour:
   Nombre: Botella de vino
   Iconos: {fileID: 21300000, guid: 8acd0c32a332a27418f2360771f408c0, type: 3}
   Tipo: 1
-  EsConsumible: 0
-  EsAcumulable: 0
-  Cantidad: 0
+  EsConsumible: 1
+  EsAcumulable: 1
+  AcumulacionMax: 1
+  Cantidad: 1
   Uso: 1

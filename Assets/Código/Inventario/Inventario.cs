@@ -21,17 +21,25 @@ public class Inventario : Singleton<Inventario>
         }
 //Verificar en caso tener un item similar en inventario
         List<int> indexes = VerificarExistencias(itemPorAñadir.ID);
-        if(itemPorAñadir.EsAcumulable)
+        if (itemPorAñadir.EsAcumulable)
         {
-            if(indexes.Count > 0);
+            if (indexes.Count > 0)
             {
-                for (int i = 0 ; i < indexes.Count; i++)
+                for (int i = 0; i < indexes.Count; i++)
                 {
-                    if(itemsInventario[indexes[i]].Cantidad < itemPorAñadir.AcumulacionMax)
+                    if (itemsInventario[indexes[i]].Cantidad < itemPorAñadir.AcumulacionMax)
                     {
-                        int diferencia = itemsInventario [indexes[i]].Cantidad - itemPorAñadir.AcumulacionMax;
-                        itemsInventario[indexes[i]].Cantidad = itemPorAñadir.AcumulacionMax;
-                        AñadirItem(itemPorAñadir, diferencia);
+                        itemsInventario[indexes[i]].Cantidad += cantidad;
+                        if (itemsInventario[indexes[i]].Cantidad > itemPorAñadir.AcumulacionMax)
+                        {
+                            int diferencia = itemsInventario[indexes[i]].Cantidad - itemPorAñadir.AcumulacionMax;
+                            itemsInventario[indexes[i]].Cantidad = itemPorAñadir.AcumulacionMax;
+                            AñadirItem(itemPorAñadir, diferencia);
+                        }
+                        
+                        InventarioUI.Instance.DibujarItemEnInventario(itemPorAñadir, 
+                            itemsInventario[indexes[i]].Cantidad, indexes[i]);
+                        return;
                     }
                 }
             }
@@ -60,7 +68,7 @@ public class Inventario : Singleton<Inventario>
         for (int i = 0; i < itemsInventario.Length; i++)
         {
             if (itemsInventario[i] != null){
-               if (itemsInventario[i].ID ==itemID);
+               if (itemsInventario[i].ID ==itemID)
             {
                 indexesDelItem.Add(i);
             }  
@@ -78,6 +86,7 @@ public class Inventario : Singleton<Inventario>
             {
                 itemsInventario[i] = item.CopiarItem();
                 itemsInventario[i].Cantidad = cantidad;
+                InventarioUI.Instance.DibujarItemEnInventario(item,cantidad,i);
                 return;
             }
         }

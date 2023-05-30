@@ -23,7 +23,7 @@ public class InventarioItem : ScriptableObject
     [Header("Parametros")]
     public string ID;
     public string Nombre;
-    public Sprite Iconos;
+    public Sprite Icono;
 
 
     [Header("Parametros")]
