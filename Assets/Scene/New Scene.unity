@@ -1270,8 +1270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 50
+    m_Right: 50
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
@@ -2025,7 +2025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b6cfb6529d57f4a9be4bfc4b1fed02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numeroDeSlots: 18
+  numeroDeSlots: 15
+  itemsInventario: []
 --- !u!4 &1238160706
 Transform:
   m_ObjectHideFlags: 0
