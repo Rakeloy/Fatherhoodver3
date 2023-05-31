@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class Inventario : Singleton<Inventario>
 {
+    public static GameObject inventDupl;
     [SerializeField] private int numeroDeSlots;
     public int NumeroDeSlots => numeroDeSlots;
 
     [Header("Items")] 
     [SerializeField] private InventarioItem[] itemsInventario;
+      void Awake(){
+        DontDestroyOnLoad(this.gameObject);
+        if(inventDupl == null){
+            inventDupl = this.gameObject;
+        }
+        else if(inventDupl != null){
+            Destroy(this.gameObject);
+        }
+    }
 
      private void Start()
     {

@@ -5,7 +5,7 @@ public class HabitacionSecreta : MonoBehaviour
     private void Start()
     {
         // Verificar si el item llave está en el inventario
-        if (Inventario.Instance.TieneItem("llave"))
+        if (Inventario.Instance.TieneItem("Llave"))
         {
             // Hacer el objeto visible
             gameObject.SetActive(true);
