@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e243bb101fefbbd4cbfbc9ed641a38eb, type: 3}
   m_Name: Item Linterna
   m_EditorClassIdentifier: 
-  ID: 
-  Nombre: 
-  Icono: {fileID: 0}
-  Tipo: 0
-  EsConsumible: 0
-  EsAcumulable: 0
-  AcumulacionMax: 0
+  ID: Linterna
+  Nombre: Linterna
+  Icono: {fileID: 21300000, guid: c03c4d62eaf080e46864b59950b43984, type: 3}
+  Tipo: 12
+  EsConsumible: 1
+  EsAcumulable: 1
+  AcumulacionMax: 1
   Cantidad: 0
-  Uso: 0
+  Uso: 1

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be2e40ce0947074b952f111a804e17f, type: 3}
   m_Name: New Item Espejo
   m_EditorClassIdentifier: 
-  ID: 
-  Nombre: 
-  Icono: {fileID: 0}
-  Tipo: 0
-  EsConsumible: 0
-  EsAcumulable: 0
-  AcumulacionMax: 0
+  ID: Espejo
+  Nombre: Espejo
+  Icono: {fileID: 21300000, guid: c5501ce8a00026e46abc0645e3f2a014, type: 3}
+  Tipo: 11
+  EsConsumible: 1
+  EsAcumulable: 1
+  AcumulacionMax: 1
   Cantidad: 0
-  Uso: 0
+  Uso: 1
