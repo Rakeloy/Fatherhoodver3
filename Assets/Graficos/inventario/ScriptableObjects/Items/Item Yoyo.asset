@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e366e9514be667b49b76ce1901ce3041, type: 3}
+  m_Name: Item Yoyo
+  m_EditorClassIdentifier: 
+  ID: Yoyo
+  Nombre: Yoyo
+  Icono: {fileID: 21300000, guid: cb86e4e56837cd54e8d38d7193328ad0, type: 3}
+  Tipo: 5
+  EsConsumible: 1
+  EsAcumulable: 1
+  AcumulacionMax: 1
+  Cantidad: 0
+  Uso: 1

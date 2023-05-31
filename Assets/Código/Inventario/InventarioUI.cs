@@ -9,9 +9,7 @@ public class InventarioUI : Singleton<InventarioUI>
     [SerializeField] private Transform contenedor;
 
     private List<InventarioSlot> slotsDisponibles = new List<InventarioSlot>();
-    void Awake(){
-       
-    }
+   
 
 
     // Start is called before the first frame update
