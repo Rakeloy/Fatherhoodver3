@@ -61,6 +61,18 @@ public class Inventario : Singleton<Inventario>
         }
 
     }
+    public bool TieneItem(string itemID)
+{
+    for (int i = 0; i < itemsInventario.Length; i++)
+    {
+        if (itemsInventario[i] != null && itemsInventario[i].ID == itemID)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 
     private List<int> VerificarExistencias(string itemID)
     {
