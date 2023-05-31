@@ -6,6 +6,8 @@ using TMPro;
 
 public class UIManager : Singleton<UIManager>
 {
+
+    
      [Header("Paneles")] 
      [SerializeField] private GameObject panelInventario;
     

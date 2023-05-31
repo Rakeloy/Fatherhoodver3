@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class InventarioUI : Singleton<InventarioUI>
 {
-    public static GameObject inventDuplUI;
+   
     [SerializeField] private InventarioSlot slotPrefab;
     [SerializeField] private Transform contenedor;
 
     private List<InventarioSlot> slotsDisponibles = new List<InventarioSlot>();
     void Awake(){
-        DontDestroyOnLoad(this.gameObject);
-        if(inventDuplUI == null){
-            inventDuplUI = this.gameObject;
-        }
-        else if(inventDuplUI != null){
-            Destroy(this.gameObject);
-        }
+       
     }
 
 

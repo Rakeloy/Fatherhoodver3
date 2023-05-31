@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Botella
   Nombre: Botella de vino
-  Icono: {fileID: 21300000, guid: 8acd0c32a332a27418f2360771f408c0, type: 3}
+  Icono: {fileID: 21300000, guid: 8d84e6e8b1e3c6946bac7c94ed9c1848, type: 3}
   Tipo: 1
   EsConsumible: 1
   EsAcumulable: 1

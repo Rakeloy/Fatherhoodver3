@@ -59,6 +59,9 @@ TagManager:
   - name: Limites
     uniqueID: 201738153
     locked: 0
+  - name: Muebles Pared
+    uniqueID: 1629525441
+    locked: 0
   - name: Inventario
     uniqueID: 1328046215
     locked: 0
