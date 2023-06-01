@@ -3,13 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class NPCDialogo : MonoBehaviour
+public enum InteraccionExtraNPC
 {
-    
+    Quests,
+    Tienda,
+    Crafting
+}
+
+[CreateAssetMenu]
+public class NPCDialogo : ScriptableObject
+{
     [Header("Info")] 
     public string Nombre;
     public Sprite Icono;
+    public bool ContieneInteraccionExtra;
+    public InteraccionExtraNPC InteraccionExtra;
 
     [Header("Saludo")] 
     [TextArea] public string Saludo;
@@ -19,10 +27,10 @@ public class NPCDialogo : MonoBehaviour
     
     [Header("Despedida")] 
     [TextArea] public string Despedida;
-
-    
 }
+
 [Serializable]
-public class DialogoTexto{
+public class DialogoTexto
+{
     [TextArea] public string Oracion;
 }

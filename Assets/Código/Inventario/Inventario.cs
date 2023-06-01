@@ -6,7 +6,7 @@ using UnityEngine;
 public class Inventario : Singleton<Inventario>
 {
     private Vector3 posicionPersonaje;
-    public static GameObject inventDupl;
+   
     [SerializeField] private int numeroDeSlots;
     public int NumeroDeSlots => numeroDeSlots;
 
@@ -14,15 +14,7 @@ public class Inventario : Singleton<Inventario>
     [SerializeField] private InventarioItem[] itemsInventario;
     
 
-      void Awake(){
-        DontDestroyOnLoad(this.gameObject);
-        if(inventDupl == null){
-            inventDupl = this.gameObject;
-        }
-        else if(inventDupl != null){
-            Destroy(this.gameObject);
-        }
-    }
+  
     public void GuardarPosicionPersonaje(Vector3 posicion)
     {
         posicionPersonaje = posicion;
