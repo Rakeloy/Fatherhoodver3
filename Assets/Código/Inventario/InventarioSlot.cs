@@ -7,11 +7,13 @@ using TMPro;
 
 public class InventarioSlot : MonoBehaviour
 {
+  
     [SerializeField] private Image itemIcono;
     
     
 
     public int Index { get; set; }
+
     
     public void ActualizarSlot(InventarioItem item, int cantidad)
     {
@@ -23,6 +25,7 @@ public class InventarioSlot : MonoBehaviour
     public void ActivarSlotUI(bool estado)
     {
         itemIcono.gameObject.SetActive(estado);
+ 
        
         
     }

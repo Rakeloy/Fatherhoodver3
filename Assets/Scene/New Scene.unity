@@ -2429,7 +2429,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5534,6 +5534,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numeroDeSlots: 15
   itemsInventario: []
+  slotsInventario: []
+  slotPrefab: {fileID: 325339550254034020, guid: 0e0e25c7fec70324395481b3630098c7, type: 3}
+  slotParentTransform: {fileID: 2969829486039616361, guid: 2080085665a5cbc43bd6aeb70765b87b, type: 3}
 --- !u!4 &1238160706
 Transform:
   m_ObjectHideFlags: 0

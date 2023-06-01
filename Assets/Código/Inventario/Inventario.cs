@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Inventario : Singleton<Inventario>
 {
     private Vector3 posicionPersonaje;
@@ -11,6 +12,8 @@ public class Inventario : Singleton<Inventario>
 
     [Header("Items")] 
     [SerializeField] private InventarioItem[] itemsInventario;
+    
+
       void Awake(){
         DontDestroyOnLoad(this.gameObject);
         if(inventDupl == null){
@@ -26,9 +29,12 @@ public class Inventario : Singleton<Inventario>
     }
 
      private void Start()
-    {
-        itemsInventario = new InventarioItem[numeroDeSlots];
-    }
+{
+    itemsInventario = new InventarioItem[numeroDeSlots];
+    
+    
+}
+
     public void AñadirItem(InventarioItem itemPorAñadir, int cantidad)
     {
         if (itemPorAñadir ==null){
@@ -113,10 +119,14 @@ public class Inventario : Singleton<Inventario>
             {
                 itemsInventario[i] = item.CopiarItem();
                 itemsInventario[i].Cantidad = cantidad;
-                InventarioUI.Instance.DibujarItemEnInventario(item,cantidad,i);
+                
+          
+                InventarioUI.Instance.DibujarItemEnInventario(item, cantidad, i);
+          
                 return;
             }
         }
     }
    
+
 }
