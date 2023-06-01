@@ -11,7 +11,6 @@ public class PersonajeMovimiento : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Vector2 _direccionMovimiento;
     private Vector2 _input;
-    private Inventario inventario; // Referencia al componente Inventario
     private void Awake(){
     _rigidbody2D = GetComponent<Rigidbody2D>();
     }
@@ -19,16 +18,7 @@ public class PersonajeMovimiento : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-         inventario = Inventario.Instance; // Obtener la instancia de Inventario
-    }
-    private void GuardarPosicionPersonaje()
-    {
-        if (inventario != null)
-        {
-            Vector3 posicionPersonaje = transform.position;
-            inventario.GuardarPosicionPersonaje(posicionPersonaje);
-        }
+        
     }
 
     // Update is called once per frame
@@ -58,13 +48,8 @@ public class PersonajeMovimiento : MonoBehaviour
             _direccionMovimiento.y = 0f;
         }
     }
-  
-   private void FixedUpdate()
-    {
-        _rigidbody2D.MovePosition(_rigidbody2D.position + _direccionMovimiento * velocidad * Time.fixedDeltaTime);
 
-        // Guardar la posición del personaje en el inventario
-        inventario.GuardarPosicionPersonaje(transform.position);
-
+    private void FixedUpdate(){
+    _rigidbody2D.MovePosition(_rigidbody2D.position + _direccionMovimiento * velocidad * Time.fixedDeltaTime);
     }
 }
