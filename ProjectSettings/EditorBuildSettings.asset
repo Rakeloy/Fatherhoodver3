@@ -17,13 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/New Scene.unity
     guid: f02fb9d5c4bd4714492bd4c63714a8c3
-  - enabled: 1
-    path: Assets/Scene/Cama.unity
-    guid: ff24727399db81242a099aaa86a397db
-  - enabled: 1
-    path: Assets/Scene/Puerta.unity
-    guid: 9fd0b0c9c48c3d64e87a1ece04287040
-  - enabled: 1
-    path: Assets/Scene/CuartoSecreto.unity
-    guid: d84b4c9524688a94ca42fa37825ae278
   m_configObjects: {}
