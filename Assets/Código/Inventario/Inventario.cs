@@ -85,7 +85,7 @@ public class Inventario : Singleton<Inventario>
                if (itemsInventario[i].ID ==itemID)
             {
                 indexesDelItem.Add(i);
-            }  
+            }
             }
            
         }
@@ -103,6 +103,7 @@ public class Inventario : Singleton<Inventario>
                 InventarioUI.Instance.DibujarItemEnInventario(item,cantidad,i);
                 return;
             }
+            
         }
     }
    
