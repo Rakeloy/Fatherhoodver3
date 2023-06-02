@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PersonajeMovimiento : MonoBehaviour
 {
+    public GameObject gestorSonido;
+
     [SerializeField] private float velocidad;
     public bool EnMovimiento => _direccionMovimiento.magnitude > 0f;
     public Vector2 DireccionMovimiento => _direccionMovimiento;
@@ -29,9 +31,11 @@ public class PersonajeMovimiento : MonoBehaviour
         //X
         if (_input.x > 0.1f){
             _direccionMovimiento.x = 1f;
+            //gestorSonido.GetComponent<AudioManager>().Pasos();
         }
         else if (_input.x < 0f){
             _direccionMovimiento.x = -1f;
+            //gestorSonido.GetComponent<AudioManager>().Pasos();
         }
         else{
             _direccionMovimiento.x = 0f;
@@ -40,9 +44,11 @@ public class PersonajeMovimiento : MonoBehaviour
         //Y
         if (_input.y > 0.1f){
             _direccionMovimiento.y = 1f;
+            //gestorSonido.GetComponent<AudioManager>().Pasos();
         }
         else if (_input.y < 0f){
             _direccionMovimiento.y = -1f;
+            //gestorSonido.GetComponent<AudioManager>().Pasos();
         }
         else{
             _direccionMovimiento.y = 0f;

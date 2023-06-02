@@ -15,7 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip caminarMadera; 
     public AudioClip caminarHierba; 
     public AudioClip desplazarInterfaz; 
-    public AudioClip cristalesPeques; 
+    public AudioClip cristalesPeques;
+    public AudioClip logro; 
+    public AudioClip pasosProtagonista; 
     
     
     private AudioSource hiloMusical;
@@ -85,6 +87,18 @@ public class AudioManager : MonoBehaviour
         hiloMusical.PlayOneShot(clicMenu, 1f);
     }
 
+    public void Logro(){
+        //que suene el clic del boton
+        //Debug.Log("Suena");
+        hiloMusical.PlayOneShot(logro, 1f);
+    }
+
+    public void Pasos(){
+        //que suene el clic del boton
+        //Debug.Log("Suena");
+        hiloMusical.PlayOneShot(pasosProtagonista, 1f);
+    }
+
     public void escenaPasillo(){
  
             hiloMusical = GetComponent<AudioSource>();
@@ -95,10 +109,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public void guardarPartida(){
-        //hiloMusical.PlayOneShot(sonidoMuerte, 1f);
+        //hiloMusical.PlayOneShot(sonidoGuardar, 1f);
     }
 
-    public void sonidoPuntos(){
-        //hiloMusical.PlayOneShot(sonidoGoal, 1f);
-    }
 }

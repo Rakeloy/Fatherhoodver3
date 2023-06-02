@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 1420331422}
   inventarioItemReferencia: {fileID: 11400000, guid: b1ccdb3d8a27257478b732bad93641c9, type: 2}
   cantidadPorAgregar: 1
 --- !u!212 &158013441
@@ -594,6 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 0}
   inventarioItemReferencia: {fileID: 11400000, guid: 29625584381c3a24a817581263aae6b6, type: 2}
   cantidadPorAgregar: 1
 --- !u!61 &243582173
@@ -859,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 0}
   inventarioItemReferencia: {fileID: 11400000, guid: f3e0ee0e685f6ac48b7640d827df7ca0, type: 2}
   cantidadPorAgregar: 1
 --- !u!61 &355984871
@@ -11104,6 +11107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 0}
   inventarioItemReferencia: {fileID: 11400000, guid: 9bb3b34d73158484986df3e0c9e98cbc, type: 2}
   cantidadPorAgregar: 1
 --- !u!212 &1414894326
@@ -11323,6 +11327,8 @@ MonoBehaviour:
   caminarHierba: {fileID: 0}
   desplazarInterfaz: {fileID: 0}
   cristalesPeques: {fileID: 0}
+  logro: {fileID: 8300000, guid: daf17a8b949f4594ca8ef158b86e3598, type: 3}
+  pasosProtagonista: {fileID: 8300000, guid: a0d81794e6afbc54fae1efbedd828238, type: 3}
 --- !u!4 &1420331425
 Transform:
   m_ObjectHideFlags: 0
@@ -11798,6 +11804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 1420331422}
   inventarioItemReferencia: {fileID: 11400000, guid: bfb6a5273ac7b994bbc039b5739574f9, type: 2}
   cantidadPorAgregar: 1
 --- !u!61 &1529523747
@@ -12171,6 +12178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de59a99358b5cfc4fbd1fe3b2515586a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 1420331422}
   velocidad: 4
 --- !u!114 &1685261868
 MonoBehaviour:
@@ -13344,6 +13352,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1420331424}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: clicBoton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1945343171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13413,6 +13433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 0}
   inventarioItemReferencia: {fileID: 11400000, guid: b2ebeabac2292a84a9b8efc687099d75, type: 2}
   cantidadPorAgregar: 1
 --- !u!61 &1977211926
@@ -13537,6 +13558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 0}
   inventarioItemReferencia: {fileID: 11400000, guid: dd629e5bd8f716148911e8744f4ea1de, type: 2}
   cantidadPorAgregar: 1
 --- !u!61 &1994769414
@@ -13661,6 +13683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68987484fecb2374eb20b859731a7572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestorSonido: {fileID: 0}
   inventarioItemReferencia: {fileID: 11400000, guid: cc375c28870ea8a44882a2cedf216e34, type: 2}
   cantidadPorAgregar: 1
 --- !u!61 &2000912571
