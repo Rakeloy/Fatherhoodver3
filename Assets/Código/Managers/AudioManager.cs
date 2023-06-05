@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
         if(scriptDuplicado == null){
             scriptDuplicado = this.gameObject;
-        }else if(scriptDuplicado != null){ //"!"?
+        }else if(scriptDuplicado != null){ 
             Destroy(this.gameObject);
         };
     }

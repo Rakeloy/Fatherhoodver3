@@ -2,23 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventarioUI : Singleton<InventarioUI>
-{
+public class InventarioUI : MonoBehaviour{
    
     [SerializeField] private InventarioSlot slotPrefab;
     [SerializeField] private Transform contenedor;
 
+    public static InventarioUI Instance { get; private set; }
+
+    public static GameObject scriptDuplicadoUI;
+
+
     private List<InventarioSlot> slotsDisponibles = new List<InventarioSlot>();
    
+    private void Awake() 
+    { 
+        // If there is an instance, and it's not me, delete myself.
+        
+        DontDestroyOnLoad(this.gameObject);
 
+        if(scriptDuplicadoUI == null){
+            scriptDuplicadoUI = this.gameObject;
+        }else if(scriptDuplicadoUI != null){ 
+            Destroy(this.gameObject);
+        };
 
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        } 
+
+    }
     // Start is called before the first frame update
     void Start()
     {
         InicializarInventario();
     }
 
-    private void InicializarInventario()
+    public void InicializarInventario()
     {
         for (int i = 0; i < Inventario.Instance.NumeroDeSlots; i++)
         {

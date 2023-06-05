@@ -15,9 +15,18 @@ EditorBuildSettings:
     path: Assets/Scene/MenuPrincipal.unity
     guid: 61d2d507933cb204da2e88485f63b66d
   - enabled: 1
-    path: Assets/Scene/New Scene.unity
+    path: Assets/Scene/Casa.unity
     guid: f02fb9d5c4bd4714492bd4c63714a8c3
   - enabled: 1
     path: Assets/Scene/Final.unity
     guid: d7deec2f2894b8645ad94a1d11c86dd7
+  - enabled: 1
+    path: Assets/Scene/Escenas eliminadas/New Scene.unity
+    guid: 491274f54ba5eff47aa278da5790c5a5
+  - enabled: 1
+    path: Assets/Scene/Escenas eliminadas/Cama.unity
+    guid: 880b5aa9634264044b1f52b35a31bd2e
+  - enabled: 1
+    path: Assets/Scene/Escenas eliminadas/Puerta.unity
+    guid: 0a42e51f3a52eb14d8d49898fe6a26e9
   m_configObjects: {}

@@ -10,11 +10,13 @@ public class Singleton<T> : MonoBehaviour where T: Component
     get{
         if(_instance == null)
         {
+           
             _instance = FindObjectOfType<T>();
             if (_instance == null)
             {
                 GameObject nuevoGO = new GameObject();
                 _instance = nuevoGO.AddComponent<T>();
+               
             }
         }
         return _instance;
@@ -22,6 +24,8 @@ public class Singleton<T> : MonoBehaviour where T: Component
   }
 
   protected virtual void Awake(){
+
     _instance = this as T;
+        DontDestroyOnLoad(_instance);
   }
 }

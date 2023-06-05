@@ -2,26 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventario : Singleton<Inventario>
+public class Inventario : MonoBehaviour
 {
-    public static GameObject inventDupl;
+    //public static GameObject inventDupl;
     [SerializeField] private int numeroDeSlots;
     public int NumeroDeSlots => numeroDeSlots;
 
     [Header("Items")] 
     [SerializeField] private InventarioItem[] itemsInventario;
     
+    public static Inventario Instance { get; private set; }
 
-     private void Start()
+    public static GameObject scriptDuplicado;
+
+
+    private void Awake() 
+    { 
+        // If there is an instance, and it's not me, delete myself.
+        
+        DontDestroyOnLoad(this.gameObject);
+
+        if(scriptDuplicado == null){
+            scriptDuplicado = this.gameObject;
+        }else if(scriptDuplicado != null){ 
+            Destroy(this.gameObject);
+        };
+
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        } 
+
+    }
+
+    private void Start()
     {
         itemsInventario = new InventarioItem[numeroDeSlots];
     }
+    
     public void AñadirItem(InventarioItem itemPorAñadir, int cantidad)
     {
         if (itemPorAñadir ==null){
             return;
         }
-//Verificar en caso tener un item similar en inventario
+        //Verificar en caso tener un item similar en inventario
         List<int> indexes = VerificarExistencias(itemPorAñadir.ID);
         if (itemPorAñadir.EsAcumulable)
         {
@@ -39,7 +67,7 @@ public class Inventario : Singleton<Inventario>
                             AñadirItem(itemPorAñadir, diferencia);
                         }
                         
-                        InventarioUI.Instance.DibujarItemEnInventario(itemPorAñadir, 
+                            InventarioUI.Instance.DibujarItemEnInventario(itemPorAñadir, 
                             itemsInventario[indexes[i]].Cantidad, indexes[i]);
                         return;
                     }

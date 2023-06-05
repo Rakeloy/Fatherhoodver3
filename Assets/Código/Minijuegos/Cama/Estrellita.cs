@@ -12,10 +12,10 @@ public class Estrellita : MonoBehaviour
     private void OnMouseDown()
     {
        if (Inventario.Instance != null)
-    {
-        // Añadir el objeto al inventario
-        Inventario.Instance.AñadirItem(ItemPaloGancho, cantidad);
-    }
+       {
+            // Añadir el objeto al inventario
+            Inventario.Instance.AñadirItem(ItemPaloGancho, cantidad);
+        }
 
         // Desactivar la estrellita
         gameObject.SetActive(false);
